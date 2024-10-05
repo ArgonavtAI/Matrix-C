@@ -4,10 +4,10 @@ OS = $(shell uname)
 ifeq ($(OS), Linux)
     F_LIB_CHECK = -lcheck -pthread -lrt -lm
 else
-    F_LIB_CHECK = -lcheck 
+    F_LIB_CHECK = -lcheck
 endif
 
-all: clean s21_matrix.a 
+all: clean s21_matrix.a
 
 s21_matrix.a: clean
 	$(CC) -c *.c
